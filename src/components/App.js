@@ -7,8 +7,8 @@ import "antd/dist/antd.css";
 
 import { Header, Content, Footer } from "../layout";
 
-import CartContext from "./CartContext";
-import ProductsContext from "./ProductsContext";
+import CartContext from "../contexts/CartContext";
+import ProductsContext from "../contexts/ProductsContext";
 
 const App = () => {
   const productsHook = useState([]);

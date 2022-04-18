@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Row, Col, Empty, Spin } from "antd";
 
 import ProductCard from "../components/ProductCard";
-import ProductsContext from "../components/ProductsContext";
+import ProductsContext from "../contexts/ProductsContext";
 
 const COLUMNS = 4;
 

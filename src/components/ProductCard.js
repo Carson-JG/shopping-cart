@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import CartContext from "./CartContext";
+import CartContext from "../contexts/CartContext";
 
 import { Card, Image, Badge, Popover, Tag, InputNumber } from "antd";
 

@@ -2,8 +2,8 @@ import { useContext, useEffect, useState } from "react";
 
 import { Table, Image, Button } from "antd";
 
-import ProductsContext from "../components/ProductsContext";
-import CartContext from "../components/CartContext";
+import ProductsContext from "../contexts/ProductsContext";
+import CartContext from "../contexts/CartContext";
 
 export default () => {
   const [cart] = useContext(CartContext);
