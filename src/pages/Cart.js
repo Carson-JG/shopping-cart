@@ -5,47 +5,6 @@ import { Table, Image, Button } from "antd";
 import ProductsContext from "../components/ProductsContext";
 import CartContext from "../components/CartContext";
 
-const columns = [
-  {
-    title: "Image",
-    dataIndex: "image",
-    key: "image",
-    render: image => (
-      <Image
-        style={{
-          margin: "auto",
-          width: "unset",
-          maxHeight: "100px",
-          maxWidth: "100px",
-        }}
-        src={image}
-      />
-    ),
-  },
-  {
-    title: "Title",
-    dataIndex: "title",
-    key: "title",
-  },
-  {
-    title: "Price",
-    dataIndex: "price",
-    key: "price",
-    render: price => (price ? "$" + price.toFixed(2) : ""),
-  },
-  {
-    title: "Qty",
-    dataIndex: "count",
-    key: "count",
-  },
-  {
-    title: "Total",
-    dataIndex: "total",
-    key: "total",
-    render: total => (total ? "$" + total.toFixed(2) : ""),
-  },
-];
-
 export default () => {
   const [cart] = useContext(CartContext);
 
@@ -87,6 +46,47 @@ export default () => {
 
     updateDataSource(newData);
   }, [cart, products]);
+
+  const columns = [
+    {
+      title: "Image",
+      dataIndex: "image",
+      key: "image",
+      render: image => (
+        <Image
+          style={{
+            margin: "auto",
+            width: "unset",
+            maxHeight: "100px",
+            maxWidth: "100px",
+          }}
+          src={image}
+        />
+      ),
+    },
+    {
+      title: "Title",
+      dataIndex: "title",
+      key: "title",
+    },
+    {
+      title: "Price",
+      dataIndex: "price",
+      key: "price",
+      render: price => (price ? "$" + price.toFixed(2) : ""),
+    },
+    {
+      title: "Qty",
+      dataIndex: "count",
+      key: "count",
+    },
+    {
+      title: "Total",
+      dataIndex: "total",
+      key: "total",
+      render: total => (total ? "$" + total.toFixed(2) : ""),
+    },
+  ];
 
   return (
     <div style={{ textAlign: "right" }}>
